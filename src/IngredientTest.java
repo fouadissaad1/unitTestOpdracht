@@ -24,6 +24,12 @@ public class IngredientTest {
         Ingredient ingredient =new Ingredient(0,null,null,null);
         assertEquals("0,null,null",ingredient.print());
     }
+    //meer account dan 1
+    @Test
+    public void printMeervoidMet3Parameter(){
+        Ingredient ingredient =new Ingredient(2,"knoflookteen","knoflooktenen");
+        assertEquals("2,knoflooktenen",ingredient.print());
+    }
 
 
 }

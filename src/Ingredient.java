@@ -24,10 +24,12 @@ public class Ingredient {
     }
 
     public String print() {
-
+        if (amount>1) return this.amount+","+this.plural;
         if (what==null) return this.amount+","+this.singular+","+this.plural;
         if((amount==0)&&(singular==null)&&(plural==null))return this.what;
         if((amount==0)&&(singular==null)&&(plural==null)&(what==null))return 0+","+null+","+null+","+null;
+
+
         return this.amount+","+this.singular+","+this.plural+","+this.what;
     }
 }
