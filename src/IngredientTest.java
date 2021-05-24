@@ -19,7 +19,11 @@ public class IngredientTest {
         assertEquals("1,eetlepel,eetelps,suiker",ingredient.print());
     }
 
-
+    @Test
+    public void print4Paramenter_Null(){
+        Ingredient ingredient =new Ingredient(0,null,null,null);
+        assertEquals("0,null,null",ingredient.print());
+    }
 
 
 }
