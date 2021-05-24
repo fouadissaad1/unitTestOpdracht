@@ -24,12 +24,28 @@ public class Ingredient {
     }
 
     public String print() {
+        String text=" naar smaak";
         if (amount>1) return this.amount+","+this.plural;
-        if (what==null) return this.amount+","+this.singular+","+this.plural;
-        if((amount==0)&&(singular==null)&&(plural==null))return this.what;
-        if((amount==0)&&(singular==null)&&(plural==null)&(what==null))return 0+","+null+","+null+","+null;
+        if ((amount==0)&&(this.singular==null)&&(this.plural==null)&&(this.what==null)) {
+            return null;
+        }
+        if (amount==0) return  this.what + text;
+        if ((amount==1)&&(this.what!=null)) return this.amount + "," + this.singular+","+this.what;
+        if (amount==1) return this.amount+","+this.singular;
+        if ((singular!=null)) return this.amount + "," + this.singular+","+this.what;
+        if (what!=null) return  this.what + text;
 
 
-        return this.amount+","+this.singular+","+this.plural+","+this.what;
+
+        ///if (what==null) return this.amount+","+this.singular+","+this.plural;
+        //if((amount==0)&&(singular==null)&&(plural==null))return this.what;
+        //if (amount==1) return  this.amount+","+this.singular+","+this.what;
+        ///if (what==null) return this.amount+","+this.singular+","+this.plural;
+        ///if((amount==0)&&(singular==null)&&(plural==null))return this.what;
+        ///if((amount==0)&&(singular==null)&&(plural==null)&(what==null))return 0+","+null+","+null+","+null;
+
+
+      return  this.what + text;
+
     }
 }
