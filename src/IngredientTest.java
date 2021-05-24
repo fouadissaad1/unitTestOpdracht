@@ -13,5 +13,13 @@ public class IngredientTest {
         assertEquals("1,appel,appels",ingredient.print());
     }
 
+    @Test
+    public void print4Paramenter(){
+        Ingredient ingredient =new Ingredient(1,"eetlepel","eetelps","suiker");
+        assertEquals("1,eetlepel,eetelps,suiker",ingredient.print());
+    }
+
+
+
 
 }

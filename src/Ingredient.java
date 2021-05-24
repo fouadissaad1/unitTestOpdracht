@@ -8,6 +8,13 @@ public class Ingredient {
         this.what = what;
     }
 
+    public Ingredient(int amount, String singular, String plural, String what) {
+        this.what = what;
+        this.amount=amount;
+        this.singular=singular;
+        this.plural=plural;
+    }
+
     public Ingredient(int amount, String singular, String plural) {
        this.amount=amount;
        this.singular=singular;
@@ -19,7 +26,9 @@ public class Ingredient {
     public String print() {
 
         if (what==null) return this.amount+","+this.singular+","+this.plural;
+        if((amount==0)&&(singular==null)&&(plural==null))return this.what;
 
-      return this.what;
+
+        return this.amount+","+this.singular+","+this.plural+","+this.what;
     }
 }
