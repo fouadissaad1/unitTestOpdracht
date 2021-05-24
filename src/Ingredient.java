@@ -5,6 +5,7 @@ public class Ingredient {
     }
 
     public String print() {
+        if (what==null) return null;
         return what;
     }
 }
