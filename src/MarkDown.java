@@ -6,7 +6,7 @@ public class MarkDown {
     public MarkDown() {
     }
 
-    public static String[] format(java.lang.String[] s)
+    public  String[] format(String s)
     {
         return String;
     }
