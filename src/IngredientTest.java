@@ -32,20 +32,16 @@ public class IngredientTest {
     }
 
     @Test
-    public void printMeervoidMet3Parameter1NrOfPortion(){
+    public void printMeervoidMet4Parameter1NrOfPortion(){
         Ingredient ingredient =new Ingredient(1,"eetlepel","eetelps","suiker");
         assertEquals("1,eetlepel,suiker",ingredient.print(1));
    }
-//
-//    @Test
-//    public void print4Paramenter_Null(){
-//        Ingredient ingredient =new Ingredient(0,null,null,null);
-//        assertEquals(null,ingredient.print(0));
-//    }
 
 
-
-
-
+    @Test
+    public void printMeervoidMet4ParameterMorethat4NrOfPortion(){
+        Ingredient ingredient =new Ingredient(4,"eetlepel","eetelps","suiker");
+        assertEquals("4,eetelps,suiker",ingredient.print(4));
+    }
 
 }
