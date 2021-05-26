@@ -14,10 +14,14 @@ public class Recipe {
 
     public void addIngredient(Ingredient ingredient) {
 
+
     }
 
 
     public String print(int amountOfPortions) {
+        if (amountOfPortions==0) return null;
+        if (amountOfPortions==1) return this.dishName;
+        if (amountOfPortions>1) return this.dishName+" voor "+this.aantalPersoon+" personnen";
         return dishName;
     }
 }

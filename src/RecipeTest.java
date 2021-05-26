@@ -15,5 +15,11 @@ public class RecipeTest {
         assertEquals(null,recipe.print(0));
     }
 
+    @Test
+    public void addAantalPersoon(){
+        Recipe recipe=new Recipe("appeltart",10);
+        assertEquals("appeltart voor 10 personnen",recipe.print(10));
+    }
+
 
 }
