@@ -17,7 +17,7 @@ public class RecipeTest {
 
     @Test
     public void addParameterHoveelOnePersoon(){
-        Recipe recipe=new Recipe("appeltart",1);
+        Recipe recipe=new Recipe("appeltart 1",1);
         assertEquals("appeltart 1" ,recipe.print());
     }
 }
