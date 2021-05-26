@@ -8,6 +8,11 @@ public class IngredientTest {
         assertEquals("peper en zout naar smaak",ingredient.print());
     }
     @Test
+    public void printWhatNull(){
+        Ingredient ingredient =new Ingredient(null);
+        assertEquals(null,ingredient.print());
+    }
+    @Test
     public void printThreParamenter(){
         Ingredient ingredient =new Ingredient(1,"appel","appels");
         assertEquals("1,appel",ingredient.print());
