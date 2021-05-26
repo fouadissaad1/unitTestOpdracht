@@ -30,7 +30,7 @@ public class Ingredient {
             return nrOfPortions+","+this.plural;
         }
         if ((nrOfPortions==1)&&(amount==1)){
-          return nrOfPortions +","+this.singular;
+          return nrOfPortions +","+this.singular+","+this.what;
         }
         if (nrOfPortions==0) return null;
 

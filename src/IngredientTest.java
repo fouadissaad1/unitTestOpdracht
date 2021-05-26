@@ -31,11 +31,11 @@ public class IngredientTest {
         assertEquals("2,knoflooktenen",ingredient.print(2));
     }
 
-//    @Test
-//    public void print4Paramenter(){
-//        Ingredient ingredient =new Ingredient(2,"eetlepel","eetelps","suiker");
-//        assertEquals("2,eetlepel,suiker",ingredient.print(2));
-//    }
+    @Test
+    public void printMeervoidMet3Parameter1NrOfPortion(){
+        Ingredient ingredient =new Ingredient(1,"eetlepel","eetelps","suiker");
+        assertEquals("1,eetlepel,suiker",ingredient.print(1));
+   }
 //
 //    @Test
 //    public void print4Paramenter_Null(){
