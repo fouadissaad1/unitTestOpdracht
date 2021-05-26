@@ -13,11 +13,7 @@ public class IngredientTest {
         Ingredient ingredient =new Ingredient(null);
         assertEquals(null,ingredient.print(0));
     }
-    @Test
-    public void printWhatNull(){
-        Ingredient ingredient =new Ingredient(null);
-        assertEquals(null,ingredient.print(5));
-    }
+
     @Test
     public void printThreParamenter(){
         Ingredient ingredient =new Ingredient(1,"appel","appels");
@@ -30,22 +26,22 @@ public class IngredientTest {
     }
 
     @Test
-    public void printMeervoidMet3Parameter(){
+    public void printMeervoidMet3ParameterMoreDen2NrOfPortion(){
         Ingredient ingredient =new Ingredient(2,"knoflookteen","knoflooktenen");
         assertEquals("2,knoflooktenen",ingredient.print(2));
     }
 
-    @Test
-    public void print4Paramenter(){
-        Ingredient ingredient =new Ingredient(1,"eetlepel","eetelps","suiker");
-        assertEquals("1,eetlepel,suiker",ingredient.print(2));
-    }
-
-    @Test
-    public void print4Paramenter_Null(){
-        Ingredient ingredient =new Ingredient(0,null,null,null);
-        assertEquals(null,ingredient.print(0));
-    }
+//    @Test
+//    public void print4Paramenter(){
+//        Ingredient ingredient =new Ingredient(2,"eetlepel","eetelps","suiker");
+//        assertEquals("2,eetlepel,suiker",ingredient.print(2));
+//    }
+//
+//    @Test
+//    public void print4Paramenter_Null(){
+//        Ingredient ingredient =new Ingredient(0,null,null,null);
+//        assertEquals(null,ingredient.print(0));
+//    }
 
 
 

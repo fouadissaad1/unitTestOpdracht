@@ -26,6 +26,12 @@ public class Ingredient {
     public String print(int nrOfPortions) {
         String text=" naar smaak";
 
+        if (nrOfPortions>1){
+            return nrOfPortions+","+this.plural;
+        }
+        if ((nrOfPortions==1)&&(amount==1)){
+          return nrOfPortions +","+this.singular;
+        }
         if (nrOfPortions==0) return null;
 
 //        if (amount>1) return this.amount+","+this.plural;
