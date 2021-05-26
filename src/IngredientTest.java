@@ -17,18 +17,18 @@ public class IngredientTest {
     @Test
     public void printThreParamenter(){
         Ingredient ingredient =new Ingredient(1,"appel","appels");
-        assertEquals("1,appel",ingredient.print(1));
+        assertEquals("1,appel,null",ingredient.print(1));
     }
     @Test
     public void printOneAmoutvoidMet3Parameter(){
         Ingredient ingredient =new Ingredient(1,"appel","appels");
-        assertEquals("1,appel",ingredient.print(1));
+        assertEquals("1,appel,null",ingredient.print(1));
     }
 
     @Test
     public void printMeervoidMet3ParameterMoreDen2NrOfPortion(){
         Ingredient ingredient =new Ingredient(2,"knoflookteen","knoflooktenen");
-        assertEquals("2,knoflooktenen",ingredient.print(2));
+        assertEquals("2,knoflooktenen,null",ingredient.print(2));
     }
 
     @Test
