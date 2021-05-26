@@ -2,7 +2,7 @@ public class Recipe {
     String dishName;
 
 
-    public Recipe(String dishName) {
+    public Recipe(String dishName, int aantalPersoon) {
         this.dishName = dishName;
     }
 
