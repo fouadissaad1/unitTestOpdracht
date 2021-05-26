@@ -9,5 +9,11 @@ public class RecipeTest {
         assertEquals("appeltaart",recipe.print(1));
     }
 
+    @Test
+    public  void amountOfPortionsNullIs(){
+        Recipe recipe=new Recipe(null);
+        assertEquals(null,recipe.print(0));
+    }
+
 
 }
