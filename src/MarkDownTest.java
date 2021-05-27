@@ -9,10 +9,17 @@ public class MarkDownTest {
     @Test
     public void printArry(){
         MarkDown markDown=new MarkDown();
-         String[] array = {"[blabla bla]"};
-         String[] expected = markDown.format( "blabla bla");
-         assertArrayEquals(array, expected);
+         String[] array = markDown.format( "blabla bla");
+         String[] expected = {"[blabla bla]"};
+         assertArrayEquals(expected, array);
     }
+
+    @Test
+    public void printArrChangeFormatbold(){
+        MarkDown markDown=new MarkDown();
+        assertArrayEquals(new String[]{"blabla <b>bla<b>"},markDown.format( "blabla *bla*"));
+
+       }
 
 
 

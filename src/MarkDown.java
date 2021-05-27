@@ -1,13 +1,19 @@
 public class MarkDown {
 
 
-    private Object String;
+
 
     public MarkDown() {
     }
     public static String[] format(String s)
     {
 
-       return new String[]{"["+s+"]"};
+
+           if (s.endsWith("*")) return new String[] {s.replace("*","<b>")};
+
+
+        return new String[]{"["+s+"]"};
     }
+
+
 }
