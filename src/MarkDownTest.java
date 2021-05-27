@@ -9,10 +9,12 @@ public class MarkDownTest {
     @Test
     public void printArry(){
         MarkDown markDown=new MarkDown();
-         String[] array = {"blabla bla"};
+         String[] array = {"[blabla bla]"};
          String[] expected = markDown.format( "blabla bla");
          assertArrayEquals(array, expected);
     }
+
+
 
 
 
