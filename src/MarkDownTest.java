@@ -31,7 +31,7 @@ public class MarkDownTest {
     @Test
     public void printArr_Null(){
         MarkDown markDown=new MarkDown();
-        assertArrayEquals(new String[]{"<b>blabla<b> bla"},markDown.format( null));
+        assertArrayEquals(null,markDown.format( null));
 
     }
 
