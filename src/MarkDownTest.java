@@ -21,7 +21,12 @@ public class MarkDownTest {
 
        }
 
+    @Test
+    public void printArrOtherTestChangeFormatbold(){
+        MarkDown markDown=new MarkDown();
+        assertArrayEquals(new String[]{"<b>blabla<b> bla"},markDown.format( "*blabla* bla"));
 
+    }
 
 
 
