@@ -1,13 +1,14 @@
 public class MarkDown {
 
 
-    private static String [] String;
+    private Object String;
 
     public MarkDown() {
     }
-
-    public  String[] format(String s)
+    public static String[] format(String s)
     {
-        return String;
+
+
+       return new String[]{s};
     }
 }
