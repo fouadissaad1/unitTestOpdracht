@@ -25,15 +25,20 @@ public class Ingredient {
 
     public String print(int nrOfPortions) {
         String text=" naar smaak";
+
         if (nrOfPortions==0) return null;
+        if ((nrOfPortions>=1)&&(this.singular==null)&&(this.plural==null)) return this.what+text;
         if ((nrOfPortions>1)&&(this.what==null)){
             return nrOfPortions+","+this.plural;
         }
         if ((nrOfPortions>1)&&(this.what!=null)){
             return nrOfPortions+","+this.plural+","+this.what;
         }
-        if ((nrOfPortions==1)&&(amount==1)){
-          return nrOfPortions +","+this.singular+","+this.what;
+        if ((nrOfPortions==1)&&(what==null)){
+          return nrOfPortions +","+this.singular;
+        }
+        if ((nrOfPortions==1)&&(what!=null)){
+            return nrOfPortions +","+this.singular+","+this.what;
         }
 
 
@@ -57,7 +62,7 @@ public class Ingredient {
         ///if((amount==0)&&(singular==null)&&(plural==null)&(what==null))return 0+","+null+","+null+","+null;
 
 
-      return  this.what + text;
+      return  this.what+text;
 
     }
 }
