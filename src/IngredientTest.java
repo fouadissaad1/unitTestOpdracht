@@ -44,4 +44,10 @@ public class IngredientTest {
         assertEquals("4,eetelps,suiker",ingredient.print(4));
     }
 
+    @Test
+    public void printNrOfPortion5And2Amout(){
+        Ingredient ingredient =new Ingredient(2,"kopje","kopjes","bloem");
+        assertEquals("5,kopjes,bloem",ingredient.print(5));
+    }
+
 }
