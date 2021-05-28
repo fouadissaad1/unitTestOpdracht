@@ -22,7 +22,7 @@ public class IngredientTest {
     @Test
     public void printOneAmoutvoidMet3Parameter(){
         Ingredient ingredient =new Ingredient(1,"appel","appels");
-        assertEquals("1,appel",ingredient.print(1));
+        assertEquals("1,appel,null",ingredient.print(1));
     }
 
     @Test
