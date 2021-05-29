@@ -16,16 +16,16 @@ public class MarkDownTest {
 
 
     @Test
-    public void printArrStartChangeFormatbold(){
+    public void printSplistArray(){
         MarkDown markDown=new MarkDown();
-        assertArrayEquals(new String[]{"<b>blabla b"},markDown.format( "*blabla b"));
+        assertArrayEquals(new String[]{"blabla,b"},markDown.format( "blabla b"));
 
     }
 
     @Test
     public void printArrEndChangeFormatbold(){
         MarkDown markDown=new MarkDown();
-        assertArrayEquals(new String[]{"<b>blabla<b> b"},markDown.format( "*blabla* b"));
+        assertArrayEquals(new String[]{"*blabla bla*"},markDown.format( "*blabla bla*"));
 
     }
 
