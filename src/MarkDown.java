@@ -9,7 +9,7 @@ public class MarkDown {
     {
 
         String[] words=new String[]{};
-        words=s.split(" ");
+        words=s.split(" * ");
         String newName=String.join(",",words);
 
 

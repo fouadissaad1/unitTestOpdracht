@@ -18,7 +18,7 @@ public class MarkDownTest {
     @Test
     public void printSplistArray(){
         MarkDown markDown=new MarkDown();
-        assertArrayEquals(new String[]{"blabla,b"},markDown.format( "blabla b"));
+        assertArrayEquals(new String[]{"blablab,*b"},markDown.format( "blablab *b"));
 
     }
 
