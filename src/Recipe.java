@@ -2,14 +2,14 @@ import java.util.ArrayList;
 
 public class Recipe {
     String dishName;
-    private int aantalPersoon;
+    private int nrOfPortions;
     ArrayList<Ingredient> ingredients = new ArrayList();
 
 
 
-    public Recipe(String dishName, int aantalPersoon) {
+    public Recipe(String dishName, int nrOfPortions) {
         this.dishName = dishName;
-        this.aantalPersoon = aantalPersoon;
+        this.nrOfPortions = nrOfPortions;
     }
 
     public Recipe(String dishName) {
@@ -25,8 +25,12 @@ public class Recipe {
     public String print(int amountOfPortions) {
 
         if (amountOfPortions==0) return null;
-        if (amountOfPortions==1) return this.dishName +" voor "+this.aantalPersoon+" persoon";
-        if (amountOfPortions>1) return this.dishName+" voor "+this.aantalPersoon+" personnen";
+        if (amountOfPortions==1) return this.dishName +" voor "+this.nrOfPortions+" persoon";
+        for (Ingredient  ingredient:ingredients) {
+                 ingredient.print(1);
+                 return ingredient.amount+","+ingredient.singular+","+ingredient.what;
+        }
+        if (amountOfPortions>1) return this.dishName+" voor "+this.nrOfPortions+" personnen";
         return dishName;
     }
 

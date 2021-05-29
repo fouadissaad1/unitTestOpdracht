@@ -28,6 +28,15 @@ public class RecipeTest {
     }
 
 
+    @Test
+    public void correct(){
+        Recipe recipe=new Recipe("appeltart",1);
+        Ingredient ingredient=new Ingredient(10,"kopje","kopjes","bloem");
+        recipe.addIngredient(ingredient);
+        assertEquals("appeltart voor 1 persoon",recipe.print(1));
+
+    }
+
 
 
 }

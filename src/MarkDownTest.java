@@ -9,17 +9,18 @@ public class MarkDownTest {
     @Test
     public void printArry(){
         MarkDown markDown=new MarkDown();
-         String[] array = markDown.format( "blabla bla");
+        String[] array = markDown.format( "blabla bla");
          String[] expected = {"[blabla bla]"};
-         assertArrayEquals(expected, array);
+        assertArrayEquals(expected, array);
     }
+
 
     @Test
     public void printArrChangeFormatbold(){
         MarkDown markDown=new MarkDown();
-        assertArrayEquals(new String[]{"blabla <b>bla<b>"},markDown.format( "blabla *bla*"));
+        assertArrayEquals(new String[]{"<b>blabla b"},markDown.format( "*blabla b"));
 
-       }
+    }
 
     @Test
     public void printArrOtherTestChangeFormatbold(){
@@ -34,6 +35,7 @@ public class MarkDownTest {
         assertArrayEquals(null,markDown.format( null));
 
     }
+
 
 
 
