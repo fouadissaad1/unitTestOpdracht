@@ -10,9 +10,9 @@ public class MarkDown {
 
         String[] words=new String[]{};
         words=s.split(" * ");
+
         String newName=String.join(",",words);
-
-
+        if(newName.startsWith("*")) return new String[]{newName.replace("*","<b>,")};
 
 
         return new String[]{newName};
