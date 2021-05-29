@@ -12,6 +12,7 @@ public class MarkDown {
         words=s.split(" * ");
 
         String newName=String.join(",",words);
+        if(newName.endsWith("*")) return new String[]{newName.replace("*",",</b>")};
         if(newName.startsWith("*")) return new String[]{newName.replace("*","<b>,")};
 
 

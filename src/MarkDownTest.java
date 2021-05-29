@@ -30,9 +30,9 @@ public class MarkDownTest {
     }
 
     @Test
-    public void printArrOtherTestChangeFormatbold(){
+    public void printArrEndChangeFormatbold(){
         MarkDown markDown=new MarkDown();
-        assertArrayEquals(new String[]{"<b>blabla<b> bla"},markDown.format( "*blabla* bla"));
+        assertArrayEquals(new String[]{"blabla,bla,</b>"},markDown.format( "blabla bla*"));
 
     }
 
