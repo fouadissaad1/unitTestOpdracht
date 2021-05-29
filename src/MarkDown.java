@@ -17,7 +17,7 @@ public class MarkDown {
 
         if(s==null) return null;
 
-        if (s.startsWith("*")) return new String[] {s.replace("*","<b>")};
+
         if (s.endsWith("*")) return new String[] {s.replace("*","</b>")};
 
         if (s.length()==2) return new String[]{s+1};
