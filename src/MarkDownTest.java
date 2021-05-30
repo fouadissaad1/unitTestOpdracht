@@ -5,16 +5,7 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class MarkDownTest {
-    @Test
-    public void printArry(){
-        MarkDown markDown=new MarkDown();
-        String[] array = markDown.format( "blabla bla");
-         String[] expected = {"[blabla bla]"};
-        assertArrayEquals(expected, array);
-    }
-
-
+public class MarkDownTest{
     @Test
     public void printSplistArray(){
         MarkDown markDown=new MarkDown();

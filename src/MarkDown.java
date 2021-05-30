@@ -10,11 +10,16 @@ public class MarkDown {
     public static String[] format(String s)
     {
 
+
+
         if (s==null) return null;
+
         String[] words=new String[]{};
+
         words=s.split(" * ");
 
         String newName=String.join(",",words);
+
         if(newName.endsWith("*")) return new String[]{newName.replace("*",",</b>")};
         if(newName.startsWith("*")) return new String[]{newName.replace("*","<b>,")};
 
