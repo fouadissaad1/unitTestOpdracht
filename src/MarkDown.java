@@ -1,3 +1,5 @@
+import org.junit.platform.commons.util.StringUtils;
+
 public class MarkDown {
 
 
@@ -8,6 +10,7 @@ public class MarkDown {
     public static String[] format(String s)
     {
 
+        if (s==null) return null;
         String[] words=new String[]{};
         words=s.split(" * ");
 
