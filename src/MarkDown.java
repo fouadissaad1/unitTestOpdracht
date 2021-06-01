@@ -22,6 +22,7 @@ public class MarkDown {
 
         if(newName.endsWith("*")) return new String[]{newName.replace("*",",</b>")};
         if(newName.startsWith("*")) return new String[]{newName.replace("*","<b>,")};
+        if (newName.endsWith("* ")) return new String[]{newName.replace("*","</b>,")};
 
 
         return new String[]{newName};
