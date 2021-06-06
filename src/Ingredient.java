@@ -21,6 +21,22 @@ public class Ingredient {
         this.what = what;
     }
 
+    public String getWhat() {
+        return what;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public String getSingular() {
+        return singular;
+    }
+
+    public String getPlural() {
+        return plural;
+    }
+
     public String print(int  nrOfPortions) {
         String text="peper en zout naar smaak";
 

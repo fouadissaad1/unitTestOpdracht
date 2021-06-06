@@ -14,7 +14,7 @@ public class RecipeTest {
     public  void printRecipeIngredient(){
         Ingredient ingredient=new Ingredient(10,"kopje","kopjes","bloem");
         Recipe recipe=new Recipe("appeltaart",ingredient);
-        assertEquals("appeltaart voor 10 personen \n"+"10 kopjjes bloem",recipe.print(10));
+        assertEquals("appeltaart voor 10 personen 10 kopjes bloem",recipe.print(10));
     }
 
 
