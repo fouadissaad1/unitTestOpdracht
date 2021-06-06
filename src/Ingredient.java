@@ -19,6 +19,6 @@ public class Ingredient {
 
         if (what==null && amount==1) return nrOfPortions+" "+this.singular;
 
-      return text;
+        return text;
     }
 }
