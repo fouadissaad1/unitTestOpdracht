@@ -18,6 +18,6 @@ public class IngredientTest {
     @Test
     public  void threeParamenterSingle(){
         Ingredient ingredient=new Ingredient(1,"appel","appels");
-        assertEquals("peper en zout naar smaak",ingredient.print(0));
+        assertEquals("1 appel",ingredient.print(1));
     }
 }
