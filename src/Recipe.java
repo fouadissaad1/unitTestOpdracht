@@ -28,7 +28,14 @@ public class Recipe {
                 + " voor " + amountOfPortions + " personen \n" +
                 (ingredient.getAmount()) + " " + ingredient.getPlural() + " " + ingredient.getWhat();
 
-        return dishName+ " voor "+amountOfPortions+" personen";
+        if (ingredient != null && ingredient.getAmount() == 1) return dishName
+                + " voor " + amountOfPortions + " persoon \n" +
+                (ingredient.getAmount()) + " " + ingredient.getSingular()+ " " + ingredient.getWhat();
+
+
+        return dishName + " voor " +
+                (amountOfPortions == 1 ? amountOfPortions + " persoon" : amountOfPortions + " personen")
+                + text;
     }
 
     public void addIngredient(Ingredient ingredient){

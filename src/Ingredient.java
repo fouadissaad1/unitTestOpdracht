@@ -37,6 +37,7 @@ public class Ingredient {
         return plural;
     }
 
+
     public String print(int  nrOfPortions) {
         String text="peper en zout naar smaak";
 
