@@ -32,4 +32,10 @@ public class IngredientTest {
         Ingredient ingredient=new Ingredient(1,"“knoflookteen”","knoflooktenen");
         assertEquals("4 knoflooktenen",ingredient.print(4));
     }
+
+    @Test
+    public  void whatSingle(){
+        Ingredient ingredient=new Ingredient(1,"eetlepel","eetlepels","suiker");
+        assertEquals("1 eetlepel suiker",ingredient.print(1));
+    }
 }
