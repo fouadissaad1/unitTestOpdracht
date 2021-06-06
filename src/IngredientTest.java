@@ -47,7 +47,7 @@ public class IngredientTest {
 
 
     @Test
-    public void whataPlural(){
+    public void whatWithAmoutPlural(){
         Ingredient ingredient = new Ingredient(2, "eetlepel", "eetlepels", "suiker");
         assertEquals("2 eetlepels suiker",ingredient.print(1));
 
