@@ -20,4 +20,10 @@ public class IngredientTest {
         Ingredient ingredient=new Ingredient(1,"appel","appels");
         assertEquals("1 appel",ingredient.print(1));
     }
+
+    @Test
+    public  void threeParamenterNrOfPortions0Single(){
+        Ingredient ingredient=new Ingredient(1,"appel","appels");
+        assertEquals("0 appels",ingredient.print(0));
+    }
 }
