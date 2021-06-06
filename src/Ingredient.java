@@ -29,8 +29,7 @@ public class Ingredient {
         if (what==null && nrOfPortions >1) return nrOfPortions+" "+this.plural;
         if (what != null && amount == 1) return this.amount + " " + this.singular + " " + this.what;
         if (what != null && amount > 1) return this.amount + " " + this.plural + " " + this.what;
-        if ((nrOfPortions==1)&&(this.singular==null)&&(this.plural==null)) return text;
-        if (nrOfPortions == 1 && this.what != null) return nrOfPortions + " " + this.singular + " " + this.what;
+
 
 
 
