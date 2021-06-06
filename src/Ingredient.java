@@ -17,7 +17,8 @@ public class Ingredient {
     public String print(int  nrOfPortions) {
         String text="peper en zout naar smaak";
 
-        if (what==null && amount==1) return nrOfPortions+" "+this.singular;
+        if (what==null && nrOfPortions==1) return nrOfPortions+" "+this.singular;
+        if (what==null && nrOfPortions==0) return nrOfPortions+" "+this.plural;
 
         return text;
     }
