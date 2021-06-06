@@ -29,7 +29,7 @@ public class IngredientTest {
 
     @Test
     public  void threeParamenterPlural(){
-        Ingredient ingredient=new Ingredient(1,"“knoflookteen”","knoflooktenen");
+        Ingredient ingredient=new Ingredient(1,"knoflookteen","knoflooktenen");
         assertEquals("4 knoflooktenen",ingredient.print(4));
     }
 
@@ -37,5 +37,11 @@ public class IngredientTest {
     public  void whatSingle(){
         Ingredient ingredient=new Ingredient(1,"eetlepel","eetlepels","suiker");
         assertEquals("1 eetlepel suiker",ingredient.print(1));
+    }
+
+    @Test
+    public  void whatPlural(){
+        Ingredient ingredient=new Ingredient(1,"eetlepel","eetlepels","suiker");
+        assertEquals("2 eetlepels suiker",ingredient.print(2));
     }
 }
