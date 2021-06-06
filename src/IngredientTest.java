@@ -26,4 +26,10 @@ public class IngredientTest {
         Ingredient ingredient=new Ingredient(1,"appel","appels");
         assertEquals("0 appels",ingredient.print(0));
     }
+
+    @Test
+    public  void threeParamenterPlural(){
+        Ingredient ingredient=new Ingredient(1,"“knoflookteen”","“knoflooktenen”");
+        assertEquals("4 knoflooktenen",ingredient.print(4));
+    }
 }
