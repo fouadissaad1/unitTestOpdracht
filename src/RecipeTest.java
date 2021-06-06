@@ -19,6 +19,14 @@ public class RecipeTest {
                 "10 kopjes bloem", recipe.print(10));
     }
 
+    @Test
+    public void printOnePersone(){
+        Ingredient ingredient=new Ingredient(1,"kopje","kopjes","bloem");
+        Recipe recipe =new Recipe("appeltaart",ingredient);
+        assertEquals("appeltaart voor 1 persoon \n" +
+                "1 kopjes bloem", recipe.print(1));
+    }
+
 
 
 }
