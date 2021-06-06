@@ -20,8 +20,14 @@ public class Recipe {
         String text="";
 
         for (Ingredient  ingredient:ingredients) {
+
             text+=dishName+"\n"+ingredient.getPlural()+ingredient.getWhat();
+
         }
+        if (ingredient != null && ingredient.getAmount() > 1) return dishName
+                + " voor " + amountOfPortions + " personen \n" +
+                (ingredient.getAmount()) + " " + ingredient.getPlural() + " " + ingredient.getWhat();
+
         return dishName+ " voor "+amountOfPortions+" personen";
     }
 
