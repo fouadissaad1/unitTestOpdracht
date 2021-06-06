@@ -14,6 +14,13 @@ public class Ingredient {
         this.plural = plural;
     }
 
+    public Ingredient(int amount, String singular, String plural, String what) {
+        this.amount = amount;
+        this.singular = singular;
+        this.plural = plural;
+        this.what = what;
+    }
+
     public String print(int  nrOfPortions) {
         String text="peper en zout naar smaak";
 
