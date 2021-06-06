@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Recipe {
-    private String dishName;
+    private final String dishName;
     private Ingredient ingredient;
-    private List<Ingredient> ingredients=new ArrayList<>();
+    private final List<Ingredient> ingredients = new ArrayList<>();
 
     public Recipe(String dishName) {
         this.dishName = dishName;
@@ -17,11 +17,11 @@ public class Recipe {
 
     public String print(int amountOfPortions) {
 
-        String text="";
+        String text = "";
 
-        for (Ingredient  ingredient:ingredients) {
+        for (Ingredient ingredient : ingredients) {
 
-            text+=dishName+"\n"+ingredient.getPlural()+ingredient.getWhat();
+            text += dishName + "\n" + ingredient.getPlural() + ingredient.getWhat();
 
         }
         if (ingredient != null && ingredient.getAmount() > 1) return dishName
@@ -30,7 +30,7 @@ public class Recipe {
 
         if (ingredient != null && ingredient.getAmount() == 1) return dishName
                 + " voor " + amountOfPortions + " persoon \n" +
-                (ingredient.getAmount()) + " " + ingredient.getSingular()+ " " + ingredient.getWhat();
+                (ingredient.getAmount()) + " " + ingredient.getSingular() + " " + ingredient.getWhat();
 
 
         return dishName + " voor " +
@@ -38,7 +38,7 @@ public class Recipe {
                 + text;
     }
 
-    public void addIngredient(Ingredient ingredient){
+    public void addIngredient(Ingredient ingredient) {
         ingredients.add(ingredient);
     }
 }
