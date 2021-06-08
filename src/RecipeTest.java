@@ -28,16 +28,14 @@ public class RecipeTest {
     }
 
     @Test
-    public void printAddTwooNewIngredients(){
-        Ingredient ingredient0 = new Ingredient(1, "kopje", "kopjes", "bloem");
-        Ingredient ingredient1 = new Ingredient(2, "eetlepel", "eetlepels", "suiker");
-        Recipe recipe = new Recipe("appeltaart");
-        recipe.addIngredient(ingredient0);
-        recipe.addIngredient(ingredient1);
-        assertEquals("appeltaart voor 10 personen \n" +
-                 "10 kopjes bloem \n" +
-                  "20 eetlepels suiker",recipe.print(10));
+    public void printIngredient(){
+        Ingredient ingredient = new Ingredient(20, "eetlepel", "eetlepels", "suiker");
+        Recipe recipe = new Recipe("appeltaart", ingredient);
+       assertEquals("appeltaart voor 10 personen \n" +
+                "20 eetlepels suiker", recipe.print(10));
     }
+
+
 
 
 
