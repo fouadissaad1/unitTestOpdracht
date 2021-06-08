@@ -20,7 +20,7 @@ public class Recipe {
         String text = "";
 
         for (Ingredient ingredient : ingredients) {
-
+             int amount=amountOfPortions+ingredient.getAmount();
             text += dishName + "\n" + ingredient.getPlural() + ingredient.getWhat();
 
         }

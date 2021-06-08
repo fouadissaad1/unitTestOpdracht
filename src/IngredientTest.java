@@ -30,7 +30,7 @@ public class IngredientTest {
     @Test
     public  void threeParamenterPlural(){
         Ingredient ingredient=new Ingredient(1,"knoflookteen","knoflooktenen");
-        assertEquals("4 knoflooktenen",ingredient.print(4));
+        assertEquals("1 knoflookteen",ingredient.print(4));
     }
 
     @Test
