@@ -1,5 +1,5 @@
 public class MarkDown {
     public String[] format(String s) {
-        return s;
+        return new String[]{s};
     }
 }
