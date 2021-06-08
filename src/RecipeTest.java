@@ -35,6 +35,18 @@ public class RecipeTest {
                 "20 eetlepels suiker", recipe.print(10));
     }
 
+    @Test
+    public void printAddTwooNewIngredients() {
+        Ingredient ingredient0 = new Ingredient(1, "kopje", "kopjes", "bloem");
+        Ingredient ingredient1 = new Ingredient(2, "eetlepel", "eetlepels", "suiker");
+        Recipe recipe = new Recipe("appeltaart");
+        recipe.addIngredient(ingredient0);
+        recipe.addIngredient(ingredient1);
+        assertEquals("appeltaart voor 20 personen \n" +
+                "21 kopjes bloem \n" +
+                "22 eetlepels suiker", recipe.print(20));
+    }
+
 
 
 
