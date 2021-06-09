@@ -9,4 +9,11 @@ public class MarkDownTest {
         MarkDown markDown= new MarkDown();
         assertArrayEquals(new String[]{"blabla bla"},markDown.format("blabla bla"));
     }
+
+    @Test
+    public  void printSplietstToArray(){
+        MarkDown markDown= new MarkDown();
+        assertArrayEquals(new String[]{"“blabla ”, “<b>”, “bla”, “</b>”"},markDown.format("blabla *bla*"));
+
+    }
 }
