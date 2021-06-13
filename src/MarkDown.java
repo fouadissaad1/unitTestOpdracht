@@ -16,7 +16,6 @@ public class MarkDown {
                 arrayList.add(arrOfStr[i]);
                 arrayList.add("</b>");
             }
-            System.out.println(arrayList);
         }
 
         return arrayList.toArray(new String[arrayList.size()]);

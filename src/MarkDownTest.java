@@ -19,4 +19,11 @@ public class MarkDownTest {
         String[] arr1 = markDown.format("blabla *bla*");
         assertArrayEquals(new String[]{"blabla ", "<b>", "bla", "</b>"}, arr1);
     }
+
+    @Test
+    public void printOtherArray() {
+        MarkDown markDown = new MarkDown();
+        String[] arr1 = markDown.format("*blabla* bla");
+        assertArrayEquals(new String[]{"", "<b>", "blabla", "</b>", " bla"}, arr1);
+    }
 }
