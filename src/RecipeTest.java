@@ -18,7 +18,7 @@ public class RecipeTest {
     }
 
     @Test
-    public void printAmountOfPortions0(){
+    public void printAmountOfPortions0() {
         Recipe recipe = new Recipe("appeltaart");
         assertEquals("appeltaart voor 0 personen", recipe.print(0));
     }
@@ -52,7 +52,7 @@ public class RecipeTest {
     }
 
     @Test
-    public void printCalculPortions1(){
+    public void printCalculPortions1() {
         Ingredient ingredient1 = new Ingredient(1, "kopje", "kopjes", "bloem");
         Ingredient ingredient2 = new Ingredient(2, "eetlepel", "eetlepels", "suiker");
         Recipe recipe = new Recipe("appeltaart");

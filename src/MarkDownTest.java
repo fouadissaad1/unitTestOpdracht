@@ -5,9 +5,9 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 public class MarkDownTest {
 
     @Test
-    public void printformat(){
-        MarkDown markDown= new MarkDown();
-        assertArrayEquals(new String[]{"blabla bla"},markDown.format("blabla bla"));
+    public void printformat() {
+        MarkDown markDown = new MarkDown();
+        assertArrayEquals(new String[]{"blabla bla"}, markDown.format("blabla bla"));
     }
 
     @Test
