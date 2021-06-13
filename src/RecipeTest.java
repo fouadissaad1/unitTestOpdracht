@@ -4,15 +4,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RecipeTest {
     @Test
-
-    public void printRecipe(){
+    public void printRecipe() {
         Recipe recipe = new Recipe("appeltaart");
         assertEquals("appeltaart voor 10 personen", recipe.print(10));
-
     }
 
     @Test
-    public  void printRecipeIngredient() {
+    public void printRecipeIngredient() {
         Ingredient ingredient = new Ingredient(10, "kopje", "kopjes", "bloem");
         Recipe recipe = new Recipe("appeltaart", ingredient);
         assertEquals("appeltaart voor 10 personen \n" +
@@ -20,18 +18,24 @@ public class RecipeTest {
     }
 
     @Test
-    public void printOnePersone(){
-        Ingredient ingredient=new Ingredient(1,"kopje","kopjes","bloem");
-        Recipe recipe =new Recipe("appeltaart",ingredient);
-        assertEquals("appeltaart voor 1 persoon \n" +
-                     "1 kopje bloem", recipe.print(1));
+    public void printAmountOfPortions0(){
+        Recipe recipe = new Recipe("appeltaart");
+        assertEquals("appeltaart voor 0 personen", recipe.print(0));
     }
 
     @Test
-    public void printIngredient(){
+    public void printOnePersone() {
+        Ingredient ingredient = new Ingredient(1, "kopje", "kopjes", "bloem");
+        Recipe recipe = new Recipe("appeltaart", ingredient);
+        assertEquals("appeltaart voor 1 persoon \n" +
+                "1 kopje bloem", recipe.print(1));
+    }
+
+    @Test
+    public void printIngredient() {
         Ingredient ingredient = new Ingredient(20, "eetlepel", "eetlepels", "suiker");
         Recipe recipe = new Recipe("appeltaart", ingredient);
-       assertEquals("appeltaart voor 10 personen \n" +
+        assertEquals("appeltaart voor 10 personen \n" +
                 "20 eetlepels suiker", recipe.print(10));
     }
 
@@ -46,9 +50,4 @@ public class RecipeTest {
                 "21 kopjes bloem \n" +
                 "22 eetlepels suiker", recipe.print(20));
     }
-
-
-
-
-
 }

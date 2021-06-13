@@ -5,8 +5,21 @@ public class MarkDown {
     public String[] format(String s) {
 
 
+        String[] arrOfStr = s.split("\\*");
+        ArrayList<String> arrayList = new ArrayList<>();
+        for (int i = 0; i < arrOfStr.length; i++) {
+            if ( (i % 2) == 0) {
+                arrayList.add(arrOfStr[i]);
+            }
+            else {
+                arrayList.add("<b>");
+                arrayList.add(arrOfStr[i]);
+                arrayList.add("</b>");
+            }
+            System.out.println(arrayList);
+        }
 
-
-        return new String[]{s};
+        return arrayList.toArray(new String[arrayList.size()]);
     }
+
 }
