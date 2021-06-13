@@ -17,6 +17,6 @@ public class MarkDownTest {
     public void printSlistArray() {
         MarkDown markDown = new MarkDown();
         String[] arr1 = markDown.format("blabla *bla*");
-        assertEquals(Arrays.asList("blabla , <b>, bla, </b>"), Arrays.asList(arr1));
+        assertArrayEquals(new String[]{"blabla ", "<b>", "bla", "</b>"}, arr1);
     }
 }
