@@ -38,15 +38,14 @@ public class Ingredient {
     }
 
 
-    public String print(int nrOfPortions) {
-        String text = "peper en zout naar smaak";
-        if (what == null && nrOfPortions == 0) return nrOfPortions + " " + this.plural;
-        if (what == null && amount == 1) return amount + " " + this.singular;
-        if (what == null && amount > 1) return amount + " " + this.plural;
+    public String print(int  nrOfPortions) {
+        String text="peper en zout naar smaak";
+        if (what==null && nrOfPortions==0) return nrOfPortions+" "+this.plural;
+        if (what==null && amount==1) return amount+" "+this.singular;
+        if (what==null && amount >1) return amount+" "+this.plural;
         if (what != null && amount == 1) return this.amount + " " + this.singular + " " + this.what;
         if (what != null && amount > 1) return this.amount + " " + this.plural + " " + this.what;
-
-
         return text;
     }
+
 }

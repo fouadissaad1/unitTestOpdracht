@@ -50,4 +50,18 @@ public class RecipeTest {
                 "21 kopjes bloem \n" +
                 "22 eetlepels suiker", recipe.print(20));
     }
+
+    @Test
+    public void printCalculPortions1(){
+        Ingredient ingredient1 = new Ingredient(1, "kopje", "kopjes", "bloem");
+        Ingredient ingredient2 = new Ingredient(2, "eetlepel", "eetlepels", "suiker");
+        Recipe recipe = new Recipe("appeltaart");
+        recipe.addIngredient(ingredient1);
+        recipe.addIngredient(ingredient2);
+        String result = recipe.print(1);
+        assertEquals("appeltaart voor 1 persoon \n" +
+                "1 kopje bloem \n" +
+                "2 eetlepels suiker", result);
+
+    }
 }
