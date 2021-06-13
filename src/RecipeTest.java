@@ -60,8 +60,8 @@ public class RecipeTest {
         recipe.addIngredient(ingredient2);
         String result = recipe.print(1);
         assertEquals("appeltaart voor 1 persoon \n" +
-                "1 kopje bloem \n" +
-                "2 eetlepels suiker", result);
+                "2 kopjes bloem \n" +
+                "3 eetlepels suiker", result);
 
     }
 }
