@@ -20,7 +20,7 @@ public class Recipe {
         String text = "";
 
         for (Ingredient ingredient : ingredients) {
-             int amount=amountOfPortions+ingredient.getAmount();
+            int amount = amountOfPortions + ingredient.getAmount();
             text += " \n" + amount + " " + (amount == 1 ? ingredient.getSingular() + " " + ingredient.getWhat() :
                     ingredient.getPlural() + " " + ingredient.getWhat());
 
@@ -29,7 +29,7 @@ public class Recipe {
                 + " voor " + amountOfPortions + " personen \n" +
                 (ingredient.getAmount()) + " " + ingredient.getPlural() + " " + ingredient.getWhat();
 
-        if (ingredient != null && amountOfPortions==1 &&ingredient.getAmount() == 1) return dishName
+        if (ingredient != null && amountOfPortions == 1 && ingredient.getAmount() == 1) return dishName
                 + " voor " + amountOfPortions + " persoon \n" +
                 (ingredient.getAmount()) + " " + ingredient.getSingular() + " " + ingredient.getWhat();
 

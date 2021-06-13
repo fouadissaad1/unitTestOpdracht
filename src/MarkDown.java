@@ -8,10 +8,9 @@ public class MarkDown {
         String[] arrOfStr = s.split("\\*");
         ArrayList<String> arrayList = new ArrayList<>();
         for (int i = 0; i < arrOfStr.length; i++) {
-            if ( (i % 2) == 0) {
+            if ((i % 2) == 0) {
                 arrayList.add(arrOfStr[i]);
-            }
-            else {
+            } else {
                 arrayList.add("<b>");
                 arrayList.add(arrOfStr[i]);
                 arrayList.add("</b>");
